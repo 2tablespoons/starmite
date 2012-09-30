@@ -1,0 +1,49 @@
+.starlet-row {
+  clear:both;
+  [class*="starlet"] {
+    float: left;
+    min-height: 1px;
+    margin:0;
+    overflow:hidden;
+    img {
+      width:100%;
+      height:auto;
+    }
+    a {
+      display:block;
+    }
+    a:hover {
+      img {
+        opacity: 0.5;
+        -webkit-transition: opacity 0.15s linear;
+           -moz-transition: opacity 0.15s linear;
+             -o-transition: opacity 0.15s linear;
+                transition: opacity 0.15s linear;
+      }
+    }
+  }
+  .starlet-tenth {
+    width:10%;
+  }
+  .starlet-fifth {
+    width:20%;
+  }
+  .starlet-third {
+    width:33.333333333333333%;
+  }
+  .starlet-fourth {
+    width:25%;
+  }
+  .starlet-sixth {
+    width:16.666666666666666%;
+  }
+  .starlet-seventh {
+    width:14.28571428571429%;
+  }
+  .starlet-eighth {
+    width:12.5%;
+  }
+  .starlet-ninth {
+    width:11.11111111111111%;
+  }
+}

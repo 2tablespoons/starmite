@@ -1,0 +1,179 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Example</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="bootstrap-2.1.1/css/bootstrap.css">
+  <link rel="stylesheet" href="starlet.css">
+  <link rel="stylesheet" href="bootstrap-responsive.css">
+
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  
+  <div class="starlet-row">
+    <div class="starlet-sixth">
+      <a href="http://github.com"><img src="example-images/1.jpg"></a>
+    </div>
+    <div class="starlet-sixth">
+      <img src="example-images/2.jpg">
+    </div>
+    <div class="starlet-sixth">
+      <img src="example-images/3.jpg">
+    </div>
+    <div class="starlet-sixth">
+      <img src="example-images/4.jpg">
+    </div>
+    <div class="starlet-sixth">
+      <img src="example-images/5.jpg">
+    </div>
+    <div class="starlet-sixth">
+      <img src="example-images/6.jpg">
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <h1>Starlet</h1>
+    <h2>A tool for creating fluid, square, marginless grid layouts</h2>
+    <p>
+      Starlet is a small set of CSS classes and some javacript that allow you to create 
+      grid layouts that are <strong>fluid</strong> and each grid element is <strong>square</strong> and 
+      has <strong>no margin</strong>. 
+    </p>
+    <h2>Meant for images</h2>
+    <p>
+      Starlet was designed for images. When you need a grid of images that are square and touching each other, 
+      maybe Starlet will help you. Or, maybe it won't. 
+    </p>
+    <p>
+      You should not use Starlet for paragraph text. Most grid systems have margins between cells for a reason (readability).
+    </p>
+    <h2>Works with Bootstrap</h2>
+    <div class="row-fluid">
+      <div class="span6">
+        <p>
+          Starlet is designed to play nicely with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.
+          So, not only can a Starlet grid span the entire browser window (as you see at the top of this page), but 
+          it can also live inside a Bootstrap grid (as you can see to the right). 
+        </p>
+      </div>
+      <div class="span6">
+        <div class="starlet-row">
+          <div class="starlet-fifth">
+            <a href="http://github.com"><img src="example-images/1.jpg"></a>
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/2.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/3.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/4.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/5.jpg">
+          </div>
+        </div>
+        <div class="starlet-row">
+          <div class="starlet-fifth">
+            <a href="http://github.com"><img src="example-images/6.jpg"></a>
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/7.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/8.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/9.jpg">
+          </div>
+          <div class="starlet-fifth">
+            <img src="example-images/10.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Name</h2>
+    <p>
+      Starlet was a Kodak camera with a square negative. For you kids out there, Kodak was a company that used to 
+      make cameras and a negative is what you'd get after developing your film. 
+    </p>
+    <p>
+      <img src="http://farm2.staticflickr.com/1322/1430073895_559c7fe5c9.jpg"> <br>
+      <a href="http://www.flickr.com/photos/wscullin/1430073895/">Photo by wscullin on Flickr</a>
+    </p>
+    <h2>How to use</h2>
+    <h3>CSS</h3>
+    <p>
+      Each Starlet row in your grid should be a div with <code>class="starlet-row"</code>. 
+      Each column should then be the appropriate number of <code>class="starlet-*"</code> divs.
+      The available number of columns are: 3, 4, 5, 6, 7, 8, 9 and 10. The respective column classes are: 
+      <code>class="starlet-third"</code>, <code>class="starlet-fourth"</code>, <code>class="starlet-fifth"</code>, 
+      <code>class="starlet-sixth"</code>, <code>class="starlet-seventh"</code>, <code>class="starlet-eighth"</code>, 
+      <code>class="starlet-ninth"</code>, and <code>class="starlet-tenth"</code>.
+    </p>
+    <h3>Javascript</h3>
+    <p>
+      Starlet uses percent widths to create its fluid grid. Because of this, the square format can only be 
+      achieved with Javascript. jQuery is required and the code below must be executed onload in order to achieve this. 
+      The code also resets the heights when the browser window is resized. 
+      This will eventually be refactored into a plugin. 
+    </p>
+<pre>
+$(function(){
+  makeSquares = function() {
+    var rows = $('.starlet-row');
+    rows.each(function() {
+      var elements = $('[class^=starlet]', this);
+      var firstWidth = elements.first().width();
+      elements.height(firstWidth);  
+    });
+  }
+  makeSquares();
+  $(window).resize(makeSquares);
+})
+</pre>
+    
+    <h2>Made by Erik Dungan</h2>
+    <p>Created by <a href="http://about.me/erikdungan">Erik Dungan</a>. Example images by <a href="http://www.johnmireles.com/">John Mireles</a>.</p>
+    <p><strong>Why don't you help out</strong> by improving it and submitting a pull request?</p>
+    <h3>License</h3>
+    <p>
+      Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
+    </p>
+    <p>
+      <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+    </p>
+    <p>
+      Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+    </p>
+    <hr>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      makeSquares = function() {
+        var rows = $('.starlet-row');
+        rows.each(function() {
+          var elements = $('[class^=starlet]', this);
+          var firstWidth = elements.first().width();
+          elements.height(firstWidth);  
+        });
+      }
+      makeSquares();
+      $(window).resize(makeSquares);
+    })
+  </script>
+</body>
+</html>
