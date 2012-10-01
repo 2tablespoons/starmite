@@ -26,17 +26,20 @@
       }
     }
   }
-  .starlet-tenth {
-    width:10%;
+  .starlet-bordered {
+    border:3px solid #000;
   }
-  .starlet-fifth {
-    width:20%;
-  }
+  .starlet-half {
+    width:50%;
+  }  
   .starlet-third {
     width:33.333333333333333%;
   }
   .starlet-fourth {
     width:25%;
+  }
+  .starlet-fifth {
+    width:20%;
   }
   .starlet-sixth {
     width:16.666666666666666%;
@@ -49,5 +52,8 @@
   }
   .starlet-ninth {
     width:11.11111111111111%;
+  }
+  .starlet-tenth {
+    width:10%;
   }
 }

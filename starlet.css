@@ -19,14 +19,16 @@
       -moz-transition: opacity 0.15s linear;
       -o-transition: opacity 0.15s linear;
       transition: opacity 0.15s linear; }
-  .starlet-row .starlet-tenth {
-    width: 10%; }
-  .starlet-row .starlet-fifth {
-    width: 20%; }
+  .starlet-row .starlet-bordered {
+    border: 3px solid #000; }
+  .starlet-row .starlet-half {
+    width: 50%; }
   .starlet-row .starlet-third {
     width: 33.333333333333333%; }
   .starlet-row .starlet-fourth {
     width: 25%; }
+  .starlet-row .starlet-fifth {
+    width: 20%; }
   .starlet-row .starlet-sixth {
     width: 16.666666666666666%; }
   .starlet-row .starlet-seventh {
@@ -35,3 +37,5 @@
     width: 12.5%; }
   .starlet-row .starlet-ninth {
     width: 11.11111111111111%; }
+  .starlet-row .starlet-tenth {
+    width: 10%; }
