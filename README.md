@@ -33,3 +33,18 @@ In your HTML, add the starlet-row class to each row and the appropriate class to
 </div>
 ```
 
+Starlet uses percent widths to create its fluid grid. Because of this, the square format can only be achieved with Javascript. jQuery is required and the code below must be executed onload in order to achieve this. The code also resets the heights when the browser window is resized. This will eventually be refactored into a plugin. 
+``` javascript
+$(function(){
+  makeSquares = function() {
+    var rows = $('.starlet-row');
+    rows.each(function() {
+      var elements = $('[class^=starlet]', this);
+      var firstWidth = elements.first().width();
+      elements.height(firstWidth);  
+    });
+  }
+  makeSquares();
+  $(window).resize(makeSquares);
+})
+```
