@@ -4,7 +4,10 @@
     float: left;
     min-height: 1px;
     margin: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
     .starlet-row [class*="starlet"] img {
       width: 100%;
       height: auto; }

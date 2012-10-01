@@ -48,3 +48,4 @@ $(function(){
   $(window).resize(makeSquares);
 })
 ```
+
