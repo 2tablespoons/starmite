@@ -6,7 +6,9 @@ Starmite
 
 Starmite is a small set of CSS classes and some javacript that allow you to create grid layouts that are fluid and each grid element is square and has no margin. 
 
-Example: http://cdn.getbokeh.com/example.html
+Example 1: http://cdn.getbokeh.com/example.html
+
+Example 2: http://cdn.getbokeh.com/example2.html
 
 Usage
 -----
