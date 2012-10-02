@@ -1,6 +1,6 @@
-.starlet-row {
+.starmite-row {
   clear:both;
-  [class*="starlet"] {
+  [class*="starmite"] {
     float: left;
     min-height: 1px;
     margin:0;
@@ -26,34 +26,34 @@
       }
     }
   }
-  .starlet-bordered {
+  .starmite-bordered {
     border:3px solid #000;
   }
-  .starlet-half {
+  .starmite-half {
     width:50%;
   }  
-  .starlet-third {
+  .starmite-third {
     width:33.333333333333333%;
   }
-  .starlet-fourth {
+  .starmite-fourth {
     width:25%;
   }
-  .starlet-fifth {
+  .starmite-fifth {
     width:20%;
   }
-  .starlet-sixth {
+  .starmite-sixth {
     width:16.666666666666666%;
   }
-  .starlet-seventh {
+  .starmite-seventh {
     width:14.28571428571429%;
   }
-  .starlet-eighth {
+  .starmite-eighth {
     width:12.5%;
   }
-  .starlet-ninth {
+  .starmite-ninth {
     width:11.11111111111111%;
   }
-  .starlet-tenth {
+  .starmite-tenth {
     width:10%;
   }
 }

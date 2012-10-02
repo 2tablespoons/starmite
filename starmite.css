@@ -1,6 +1,6 @@
-.starlet-row {
+.starmite-row {
   clear: both; }
-  .starlet-row [class*="starlet"] {
+  .starmite-row [class*="starmite"] {
     float: left;
     min-height: 1px;
     margin: 0;
@@ -8,34 +8,34 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-    .starlet-row [class*="starlet"] img {
+    .starmite-row [class*="starmite"] img {
       width: 100%;
       height: auto; }
-    .starlet-row [class*="starlet"] a {
+    .starmite-row [class*="starmite"] a {
       display: block; }
-    .starlet-row [class*="starlet"] a:hover img {
+    .starmite-row [class*="starmite"] a:hover img {
       opacity: 0.5;
       -webkit-transition: opacity 0.15s linear;
       -moz-transition: opacity 0.15s linear;
       -o-transition: opacity 0.15s linear;
       transition: opacity 0.15s linear; }
-  .starlet-row .starlet-bordered {
+  .starmite-row .starmite-bordered {
     border: 3px solid #000; }
-  .starlet-row .starlet-half {
+  .starmite-row .starmite-half {
     width: 50%; }
-  .starlet-row .starlet-third {
+  .starmite-row .starmite-third {
     width: 33.333333333333333%; }
-  .starlet-row .starlet-fourth {
+  .starmite-row .starmite-fourth {
     width: 25%; }
-  .starlet-row .starlet-fifth {
+  .starmite-row .starmite-fifth {
     width: 20%; }
-  .starlet-row .starlet-sixth {
+  .starmite-row .starmite-sixth {
     width: 16.666666666666666%; }
-  .starlet-row .starlet-seventh {
+  .starmite-row .starmite-seventh {
     width: 14.28571428571429%; }
-  .starlet-row .starlet-eighth {
+  .starmite-row .starmite-eighth {
     width: 12.5%; }
-  .starlet-row .starlet-ninth {
+  .starmite-row .starmite-ninth {
     width: 11.11111111111111%; }
-  .starlet-row .starlet-tenth {
+  .starmite-row .starmite-tenth {
     width: 10%; }
